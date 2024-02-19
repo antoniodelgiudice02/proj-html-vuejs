@@ -19,7 +19,7 @@ export default {
 <template>
     <app-hero />
 
-    <div class="container debug" v-for="(section, index) in store.sections">
+    <div class="section debug" v-for="(section, index) in store.sections">
 
         <div class="section-container debug">
 
@@ -33,7 +33,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.container {
+.section {
     flex-direction: column;
 
     .section-container {
