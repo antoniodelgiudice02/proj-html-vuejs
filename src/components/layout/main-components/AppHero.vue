@@ -12,13 +12,18 @@ export default {
 </script>
 
 <template>
+  <div id="jumbotron">
+    <div class="container debug">
 
-    <div id="jumbotron">
-        <span>Hero</span>
+      <span>hero</span>
+
     </div>
-
+  </div>
 </template>
 
 <style lang="scss" scoped>
-
+.debug {
+  border: 1px solid red;
+  height: 500px;
+}
 </style>
