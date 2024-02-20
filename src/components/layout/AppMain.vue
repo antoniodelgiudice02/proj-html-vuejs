@@ -53,21 +53,19 @@ export default {
         </ul>
     </nav>
 
-    <section id="jumbo" class="debug">
-
+    <section id="jumbo" class="d-flex justify-content-center align-items-center">
 
 
         <div class="container d-flex justify-content-center align-items-center">
 
             <div class="w-50">
-                <div class="text text-center debug2 ">
-                    <h1>titolo</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quis?Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Hic, aut!</p>
+                <div class="text text-center">
+                    <h1>Ready <span>Team</span></h1>
+                    <p>No matter what your company needs, we will ready to assist you in the best possible way.</p>
                 </div>
-                <div class="d-flex justify-content-around">
-                    <div class="btn btn-primary">click</div>
-                    <div class="btn btn-light">click</div>
+                <div class="d-flex justify-content-center">
+                    <div class="my-btn my-btn-solid">GET IN TOUCH</div>
+                    <div class="my-btn my-btn-regular">READ MORE</div>
                 </div>
 
             </div>
@@ -295,32 +293,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-section {
-    padding: 50px 0;
-}
 
-.container {
-    width: 60%;
-}
-
-#contacts-form {
-    div {
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
-    }
-}
-
-li {
-    list-style: none;
-    margin: 0 10px;
-}
-
-
-
-.my-form {
-    height: 50px;
-}
+// @use '../../assets/style/general.scss';
 
 .debug {
 
