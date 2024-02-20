@@ -1,5 +1,6 @@
 <script>
 import { store } from '../../../store'
+import AppCard from '../items/AppCard.vue'
 
 export default {
   data() {
@@ -12,8 +13,11 @@ export default {
     name: String,
     title: String,
     paragraph: String,
+    cards: Array
 
-  }
+  },
+
+  components: { AppCard }
 
 }
 </script>
@@ -27,6 +31,8 @@ export default {
       <span> {{ name }}</span>
       <h1>{{ title }}</h1>
       <p>{{ paragraph }}</p>
+
+      <app-card v-for="card in cards"></app-card>
 
     </div>
 

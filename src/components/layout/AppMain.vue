@@ -11,7 +11,7 @@ export default {
         }
     },
 
-    components: { AppSection, AppHero }
+    components: { AppSection, AppHero, }
 
 }
 </script>
@@ -21,10 +21,10 @@ export default {
 
     <div class="section debug" v-for="(section, index) in store.sections">
 
-        <div class="section-container debug">
+        <div class="container debug">
 
             <app-section :class="'section' + index.toString()" class="debug" :title="section.title" :name="section.name"
-                :paragraph="section.paragraph">
+                :paragraph="section.paragraph" :cards="section.cards">
             </app-section>
 
         </div>
@@ -36,7 +36,7 @@ export default {
 .section {
     flex-direction: column;
 
-    .section-container {
+    .container {
         width: 70%;
         height: 100%;
         margin: 50px;
