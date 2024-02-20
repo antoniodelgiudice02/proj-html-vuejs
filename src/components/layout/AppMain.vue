@@ -10,7 +10,7 @@ export default {
     data() {
         return {
             store,
-            colClass: 
+            colClass: ''
         }
     },
 
@@ -27,6 +27,8 @@ export default {
             if (index == 3){
                 this.colClass = 'col-3'
             }
+            
+            return this.colClass
         }
     }
 
@@ -110,7 +112,7 @@ export default {
             <nav-bar></nav-bar>
 
             <div class="row">
-                <div :class="colClass.assignColClass(index)"></div>
+                <div :class="assignColClass(index)"></div>
             </div>
 
         </div>
