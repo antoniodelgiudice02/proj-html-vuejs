@@ -84,6 +84,32 @@ nav{
 
 }
 
+//---------------------------------------------------------
+//                       BUSINESS
+
+#business{
+    background-color: #eef4ed;
+    padding: 100px 0;
+    
+    span{
+        color: $secondary-color;
+    }
+
+    h1{
+
+        color: $primary-color;
+ 
+         span{
+             padding: 0 10px;
+             background-color: $third-color;
+         }
+     }
+
+    p{
+        color: $text-primary-color;
+    }
+}
+
 
 
 #contacts-form {

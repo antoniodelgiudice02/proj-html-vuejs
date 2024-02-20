@@ -78,15 +78,15 @@ export default {
         <div id="business-text-n-button" class="container d-flex justify-content-between align-items-center">
             <div class="row w-100 justify-content-between">
 
-                <div class="text col-9 debug2 ">
-                    <span>titolo</span>
-                    <h1>titolo</h1>
+                <div class="text col-9 ">
+                    <span>OUR BUSINESS AREAS</span>
+                    <h1>Excellence in <span>Services</span></h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quis?Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Hic, aut!</p>
                 </div>
 
-                <div class="button col-2 d-flex justify-content-center align-items-center debug2">
-                    <div class="btn btn-primary">vai</div>
+                <div class="button col-2 d-flex justify-content-center align-items-end">
+                    <div class="my-btn my-btn-solid">SEE ALL</div>
                 </div>
 
             </div>
