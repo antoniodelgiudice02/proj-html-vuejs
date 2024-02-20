@@ -94,6 +94,27 @@ export const store = reactive({
         }
     ],
 
+    partners:[
+        {
+            image: 'image',
+        },
+        {
+            image: 'image',
+        },
+        {
+            image: 'image',
+        },
+        {
+            image: 'image',
+        },
+        {
+            image: 'image',
+        },
+        {
+            image: 'image',
+        }
+    ],
+
     
 });
 

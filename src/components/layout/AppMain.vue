@@ -5,6 +5,7 @@ import CardBusiness from './main-components/CardBusiness.vue'
 import CardNetwork from './main-components/CardNetwork.vue'
 import CardProjects from './main-components/CardProjects.vue'
 import CardNumbers from './main-components/CardNumbers.vue'
+import NumbersPartner from './main-components/NumbersPartner.vue'
 
 export default {
     data() {
@@ -13,7 +14,7 @@ export default {
         }
     },
 
-    components: {  CardBusiness, CardNetwork, CardProjects, CardNumbers },
+    components: {  CardBusiness, CardNetwork, CardProjects, CardNumbers, NumbersPartner },
 
     // methods:{
     //     assignColClass(index){
@@ -163,8 +164,6 @@ export default {
 
     </section>
 
-
-
     <section id="numbers" class="debug">
 
         <div id="numbers-text" class="container d-flex justify-content-center align-items-center">
@@ -192,23 +191,9 @@ export default {
 
         <div class="container debug">
             <div class="row">
-                <div class="col-2">
-                    <img src="" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="" alt="">
+                <div class="col-2" v-for="image in store.partners">
+                    <NumbersPartner
+                    :image="image.image"/>
                 </div>
             </div>
         </div>
