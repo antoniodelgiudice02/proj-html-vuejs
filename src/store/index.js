@@ -75,6 +75,25 @@ export const store = reactive({
         },
     ],
 
+    cardNumbers:[
+        {
+            title: '100',
+            text: 'titolo'
+        },
+        {
+            title: '100',
+            text: 'titolo'
+        },
+        {
+            title: '100',
+            text: 'titolo'
+        },
+        {
+            title: '100',
+            text: 'titolo'
+        }
+    ],
+
     
 });
 
