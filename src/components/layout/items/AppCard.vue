@@ -13,8 +13,8 @@ export default {
 
 <template>
 
-    <div class="card">
-        <span>faf</span>
+    <div >
+        <span></span>
     </div>
 
 </template>
@@ -25,6 +25,5 @@ export default {
 }
 .debug {
   border: 1px solid red;
-  height: 500px;
 }
 </style>

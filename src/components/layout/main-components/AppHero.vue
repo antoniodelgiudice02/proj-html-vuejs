@@ -24,6 +24,5 @@ export default {
 <style lang="scss" scoped>
 .debug {
   border: 1px solid red;
-  height: 500px;
 }
 </style>

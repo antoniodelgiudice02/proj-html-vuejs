@@ -32,9 +32,16 @@ export default {
       <h1>{{ title }}</h1>
       <p>{{ paragraph }}</p>
 
-      <app-card v-for="card in cards"></app-card>
+
 
     </div>
+
+    <div class="card-container">
+
+      <app-card v-for="card in cards" :class="(cards.length > 4) ? 'my-card-30' : 'my-card-50'" ></app-card>
+
+    </div>
+
 
 
 
@@ -43,8 +50,29 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .my-card-30{
+    border: 0.5px solid gray;
+    width: 30%;
+    height: 200px;
+    margin: 10px 0;
+  }
+  .my-card-50{
+    border: 0.5px solid gray;
+    width: 45%;
+    height: 200px;
+    margin: 10px 0;
+  }
+}
+
 .debug {
   border: 1px solid red;
-  height: 500px;
+
 }
 </style>

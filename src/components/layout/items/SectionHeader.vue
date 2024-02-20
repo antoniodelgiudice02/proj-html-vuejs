@@ -12,11 +12,16 @@ export default {
 </script>
 
 <template>
-
-
+  <div>
+    <span></span>
+    <span></span>
+    <p></p>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-
-
+div {
+  display: flex;
+  flex-direction: column;
+}
 </style>
