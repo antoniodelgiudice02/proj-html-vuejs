@@ -8,22 +8,33 @@ export default {
     }
   },
 
+  props:{
+    title: String,
+    text: String
+  }
+
 }
 </script>
 
 <template>
 
-    <div >
-        <span></span>
+    <div class="card">
+        <h1>{{ title }}</h1>
+        <p>{{ text }}</p>
     </div>
+
+
+
 
 </template>
 
 <style lang="scss" scoped>
 
-.card{
+.card {
+    height: 200px;
+    margin: 15px 0;
+    padding: 20px;
 }
-.debug {
-  border: 1px solid red;
-}
+
+
 </style>
