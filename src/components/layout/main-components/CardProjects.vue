@@ -10,7 +10,7 @@ export default {
 
   props:{
     title: String,
-    image: String
+    text: String
   }
 
 }
@@ -20,7 +20,7 @@ export default {
 
     <div class="card">
         <h1>{{ title }}</h1>
-        <p>{{ image }}</p>
+        <p>{{ text }}</p>
     </div>
 
 

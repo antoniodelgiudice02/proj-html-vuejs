@@ -3,6 +3,7 @@ import { store } from '../../store'
 
 import CardBusiness from './main-components/CardBusiness.vue'
 import CardNetwork from './main-components/CardNetwork.vue'
+import CardProjects from './main-components/CardProjects.vue'
 
 export default {
     data() {
@@ -11,7 +12,7 @@ export default {
         }
     },
 
-    components: {  CardBusiness, CardNetwork },
+    components: {  CardBusiness, CardNetwork, CardProjects },
 
     // methods:{
     //     assignColClass(index){
@@ -148,17 +149,10 @@ export default {
             <div class="container debug">
 
                 <div class="row">
-                    <div class="col-4">
-                        <div class="card"></div>
-                        <div class="card"></div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card"></div>
-                        <div class="card"></div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card"></div>
-                        <div class="card"></div>
+                    <div class="col-4" v-for="card in store.cardProjects">
+                        <CardProjects
+                        :title="card.title"
+                        :image="card.image"/>
                     </div>
                 </div>
 

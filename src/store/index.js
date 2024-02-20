@@ -46,7 +46,34 @@ export const store = reactive({
             title: 'card 4',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
         }
-    ]
+    ],
+
+    cardProjects:[
+        {
+            title: 'card 1',
+            image: ''
+        },
+        {
+            title: 'card 2',
+            image: ''
+        },
+        {
+            title: 'card 3',
+            image: ''
+        },
+        {
+            title: 'card 4',
+            image: ''
+        },
+        {
+            title: 'card 5',
+            image: ''
+        },
+        {
+            title: 'card 6',
+            image: ''
+        },
+    ],
 
     
 });
