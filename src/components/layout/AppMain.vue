@@ -14,7 +14,7 @@ export default {
         }
     },
 
-    components: {  CardBusiness, CardNetwork, CardProjects, CardNumbers, NumbersPartner },
+    components: { CardBusiness, CardNetwork, CardProjects, CardNumbers, NumbersPartner },
 
     // methods:{
     //     assignColClass(index){
@@ -38,19 +38,42 @@ export default {
 </script>
 
 <template>
-    <app-hero />
 
-    <!-- <div class="section debug" v-for="(section, index) in store.sections">
+    <nav class="d-flex justify-content-around align-items-center debug">
+        <span>logo</span>
+        <ul class="p-0 m-0 d-flex align-items-center">
+            <li>nav item</li>
+            <li>nav item</li>
+            <li>nav item</li>
+            <li>nav item</li>
+            <li>nav item</li>
+            <li>
+                <div class="btn btn-primary"> click</div>
+            </li>
+        </ul>
+    </nav>
 
-        <div class="container debug">
+    <section id="jumbo" class="debug">
 
-            <app-section :class="'section' + index.toString()" class="default debug" :title="section.title"
-                :name="section.name" :paragraph="section.paragraph" :cards="section.cards">
-            </app-section>
 
+
+        <div class="container d-flex justify-content-center align-items-center">
+
+            <div class="w-50">
+                <div class="text text-center debug2 ">
+                    <h1>titolo</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quis?Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Hic, aut!</p>
+                </div>
+                <div class="d-flex justify-content-around">
+                    <div class="btn btn-primary">click</div>
+                    <div class="btn btn-light">click</div>
+                </div>
+
+            </div>
         </div>
 
-    </div> -->
+    </section>
 
     <section id="business" class="debug">
 
@@ -75,9 +98,7 @@ export default {
 
             <div class="row flex-wrap">
                 <div class="col-4" v-for="card in store.cardBusiness">
-                    <card-business
-                    :title="card.title"
-                    :text="card.text"/>
+                    <card-business :title="card.title" :text="card.text" />
                 </div>
             </div>
 
@@ -106,9 +127,7 @@ export default {
 
             <div class="row w-50">
                 <div class="col-6" v-for="card in store.cardNetwork">
-                    <card-network
-                    :title="card.title"
-                    :text="card.text"/>
+                    <card-network :title="card.title" :text="card.text" />
                 </div>
             </div>
 
@@ -152,9 +171,7 @@ export default {
 
                 <div class="row">
                     <div class="col-4" v-for="card in store.cardProjects">
-                        <CardProjects
-                        :title="card.title"
-                        :image="card.image"/>
+                        <CardProjects :title="card.title" :image="card.image" />
                     </div>
                 </div>
 
@@ -181,9 +198,7 @@ export default {
 
             <div class="row justify-content-center">
                 <div class="col-3" v-for="card in store.cardNumbers">
-                    <CardNumbers
-                    :title="card.title"
-                    :text="card.text"/>
+                    <CardNumbers :title="card.title" :text="card.text" />
                 </div>
             </div>
 
@@ -192,8 +207,7 @@ export default {
         <div class="container debug">
             <div class="row">
                 <div class="col-2" v-for="image in store.partners">
-                    <NumbersPartner
-                    :image="image.image"/>
+                    <NumbersPartner :image="image.image" />
                 </div>
             </div>
         </div>
@@ -278,15 +292,14 @@ export default {
         </div>
 
     </section>
-
 </template>
 
 <style lang="scss" scoped>
-
-section{
+section {
     padding: 50px 0;
 }
-.container{
+
+.container {
     width: 60%;
 }
 
