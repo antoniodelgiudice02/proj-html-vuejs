@@ -8,25 +8,38 @@ import SectionResults from './main-components/SectionResults.vue'
 import PartnersLogos from './main-components/PartnersLogos.vue'
 import GetInTouch from './main-components/GetInTouch.vue'
 
+
 export default {
     data() {
         return {
             store,
+            sectionClass: '',
+            current: ''
         }
     },
 
+   
     components: { ServicesSection, SectionAbout, SectionProjects, SectionResults, PartnersLogos, GetInTouch },
 
+    computed:{
+        currentSection(){
+            this.current = this.store.sections[this.current]
+            return this.current
+        }
+    },
+
+    
+
 }
+
 </script>
 
 <template>
-
+    
     <nav class="d-flex justify-content-around align-items-center debug">
         <span>logo</span>
         <ul class="p-0 m-0 d-flex align-items-center">
-            <li v-for="(section, index) in store.sections">{{ section.name }}</li>
-
+            <li v-for="(section, index) in store.sections" @click="getCurrentSection(index)">{{ section.name }}</li>
             <li>
                 <div class="btn btn-primary"> click</div>
             </li>
@@ -53,7 +66,7 @@ export default {
 
     </section>
 
-    <ServicesSection/>
+    <ServicesSection :class="sectionClass"/>
 
     <SectionAbout/>
 
@@ -65,11 +78,17 @@ export default {
 
     <GetInTouch/>
 
+    
+
 
 </template>
 
 <style lang="scss" scoped>
 // @use '../../assets/style/general.scss';
+
+.fixed{
+    position: fixed;
+}
 
 .debug {
 

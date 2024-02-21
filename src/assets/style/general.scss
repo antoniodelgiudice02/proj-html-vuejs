@@ -146,16 +146,21 @@ nav {
 //                            NUMBERS
 
 #numbers{
+  margin-top: 70px ;
     background-image: url(./images/bg-7.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
     @include sectionHeaderStyleSecondary();
+    .card{
+      border: none;
+    }
 }
 
 //---------------------------------------------------------
 //                              PARTNERS
 
 #partners{
+  margin-bottom: 70px;
     background-color: $fourth-color;
     .row{
         padding: 0;
@@ -170,6 +175,7 @@ nav {
 
 #contacts{
   @include sectionHeaderStylePrimary();
+  margin: 70px 0;
 
   #contacts-form > div{
     margin: 0;

@@ -8,6 +8,7 @@ export default {
     data() {
         return {
             store,
+            current: ''
         }
     },
 
@@ -17,7 +18,7 @@ export default {
         }
     },
 
-    components: { CardServices }
+    components: { CardServices },
 
 }
 </script>
@@ -45,7 +46,7 @@ export default {
         <div class="container">
 
             <div class="row flex-wrap">
-                <div class="col-4" v-for="card in store.cardBusiness">
+                <div class="col-4" v-for="card in store.sections[1].cards">
                     <card-services :title="card.title" :text="card.text" :icon="card.icon" />
                 </div>
             </div>
@@ -55,4 +56,6 @@ export default {
     </section>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>

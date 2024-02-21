@@ -50,7 +50,7 @@ export default {
             <div class="card-container">
 
                 <div class="row">
-                    <div class="col-4" v-for="card in store.cardProjects">
+                    <div class="col-4" v-for="card in store.sections[3].cards">
                         <CardProjects :title="card.title" :image="card.image" />
                     </div>
                 </div>

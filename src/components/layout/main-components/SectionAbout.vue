@@ -40,7 +40,7 @@ export default {
             <div id="network-content" class="container m-0">
 
                 <div class="row">
-                    <div class="col-6" v-for="card in store.cardNetwork">
+                    <div class="col-6" v-for="card in store.sections[2].cards">
                         <card-network :title="card.title" :text="card.text" :icon="card.icon" />
                     </div>
                 </div>
