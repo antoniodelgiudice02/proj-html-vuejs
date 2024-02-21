@@ -21,17 +21,7 @@ export default {
    
     components: { ServicesSection, SectionAbout, SectionProjects, SectionResults, PartnersLogos, GetInTouch },
 
-    computed:{
-        currentSection(){
-            this.current = this.store.sections[this.current]
-            return this.current
-        }
-    },
-
-    
-
 }
-
 </script>
 
 <template>
@@ -39,7 +29,8 @@ export default {
     <nav class="d-flex justify-content-around align-items-center debug">
         <span>logo</span>
         <ul class="p-0 m-0 d-flex align-items-center">
-            <li v-for="(section, index) in store.sections" @click="getCurrentSection(index)">{{ section.name }}</li>
+            <li v-for="(section, index) in store.sections">{{ section.name }}</li>
+
             <li>
                 <div class="btn btn-primary"> click</div>
             </li>
