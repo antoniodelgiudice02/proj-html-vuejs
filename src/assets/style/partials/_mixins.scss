@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 @mixin flex-center(){
     display: flex;
     justify-content: center;
@@ -7,4 +9,44 @@
 @mixin debug(){
     border: 1px solid red;
 
+}
+
+@mixin sectionHeaderStylePrimary(){
+    .intro {
+        color: $secondary-color;
+      }
+    
+      h1 {
+        color: $primary-color;
+    
+        span {
+          color: $secondary-color;
+          padding: 0 10px;
+          background-color: $third-color;
+        }
+      }
+    
+      p {
+        color: $text-primary-color;
+      }
+}
+
+@mixin sectionHeaderStyleSecondary(){
+    .intro {
+        color: $secondary-color;
+      }
+    
+      h1 {
+        color: white;
+    
+        span {
+          color: white;
+          padding: 0 10px;
+          background-color: $third-color;
+        }
+      }
+    
+      p {
+        color: $text-secondary-color;
+      }
 }

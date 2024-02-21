@@ -38,7 +38,6 @@ export default {
 </script>
 
 <template>
-
     <nav class="d-flex justify-content-around align-items-center debug">
         <span>logo</span>
         <ul class="p-0 m-0 d-flex align-items-center">
@@ -79,7 +78,7 @@ export default {
             <div class="row w-100 justify-content-between">
 
                 <div class="text col-9 ">
-                    <span>OUR BUSINESS AREAS</span>
+                    <span class="intro">OUR BUSINESS AREAS</span>
                     <h1>Excellence in <span>Services</span></h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quis?Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Hic, aut!</p>
@@ -109,9 +108,9 @@ export default {
         <div id="network-text" class="container d-flex justify-content-start align-items-center">
             <div class="row w-50 justify-content-between">
 
-                <div class="text col debug2 ">
-                    <span>titolo</span>
-                    <h1>titolo</h1>
+                <div class="text col ">
+                    <span class="intro">ABOUT THE NETWORK</span>
+                    <h1><span>The</span>Company</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quis?Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Hic, aut!</p>
                 </div>
@@ -129,9 +128,9 @@ export default {
                 </div>
             </div>
 
-            <div class="button w-50 d-flex align-items-center debug2">
-                <div class="btn btn-primary">vai</div>
-                <div class="btn btn-light mx-3">vai</div>
+            <div class="button w-50 d-flex align-items-center">
+                <div class="my-btn my-btn-solid">GET IN TOUCH</div>
+                <div class="my-btn my-second-btn-regular mx-3">READ MORE</div>
             </div>
 
         </div>
@@ -140,14 +139,14 @@ export default {
 
     <section id="projects" class="debug">
 
-        <div class="container debug">
+        <div class="container">
 
             <div id="projects-text-n-filter" class="container d-flex justify-content-center align-items-center">
                 <div class="row text-center">
 
-                    <div class="text col debug2 ">
-                        <span>titolo</span>
-                        <h1>titolo</h1>
+                    <div class="text col ">
+                        <span class="intro">WE DO MORE FOR EVERYONE</span>
+                        <h1>Actions & <span>Projects</span></h1>
                     </div>
 
                     <div class="filter">
@@ -185,8 +184,8 @@ export default {
             <div class="row text-center">
 
                 <div class="text col debug2 ">
-                    <span>titolo</span>
-                    <h1>titolo</h1>
+                    <span class="intro">WHAT ARE WE DOING</span>
+                    <h1><span>Results</span>in Numbers</h1>
                 </div>
 
             </div>
@@ -202,51 +201,51 @@ export default {
 
         </div>
 
-        <div class="container debug">
-            <div class="row">
-                <div class="col-2" v-for="image in store.partners">
-                    <NumbersPartner :image="image.image" />
-                </div>
-            </div>
-        </div>
+
 
     </section>
 
+    <div id="partners" class="d-flex justify-content-center">
+        <div class="container w-100 m-0 d-flex debug">
+            <div class="col-2" v-for="image in store.partners">
+                <NumbersPartner :image="image.image" />
+            </div>
+
+        </div>
+    </div>
+
     <section id="contacts" class="debug">
 
-        <div class="container debug">
+        <div class="container">
 
-            <div class="row debug">
+            <div class="row ">
                 <div class="col-7">
 
-                    <div class="contacts-text col debug2 ">
-                        <span>titolo</span>
-                        <h1>titolo</h1>
+                    <div class="contacts-text col ">
+                        <span class="intro">SEND A MESSAGE</span>
+                        <h1>Get in<SPAN>Touch</SPAN></h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidque distinctio vel unde cumque
                             laboriosam esse. Dicta, atque repellat.</p>
                     </div>
 
                     <div id="contacts-form" class="d-flex flex-wrap justify-content-between">
 
-                        <div class="col-5">
-                            <label for="exampleFormControlInput1" class="form-label"></label>
-                            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="name">
+                        <div class="col-6">
+                            <input type="name" class="my-form-control" id="exampleFormControlInput1" placeholder="Name">
                         </div>
 
-                        <div class="col-5">
-                            <label for="exampleFormControlInput1" class="form-label"></label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                        <div class="col-6">
+                            <input type="email" class="my-form-control" id="exampleFormControlInput1"
                                 placeholder="name@example.com">
                         </div>
 
-                        <div class="col-5">
-                            <label for="exampleFormControlInput1" class="form-label"></label>
-                            <input type="phone" class="form-control" id="exampleFormControlInput1" placeholder="Phone">
+                        <div class="col-6">
+                            <input type="phone" class="my-form-control" id="exampleFormControlInput1" placeholder="Phone">
                         </div>
 
-                        <div class="col-5">
+                        <div class="col-6">
 
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="my-form-control" aria-label="Default select example">
                                 <option selected>Other info</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -256,13 +255,13 @@ export default {
                         </div>
 
                         <div class="form-floating col-12">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            <textarea class="my-form-control" placeholder="Message" id="floatingTextarea2"
                                 style="height: 100px"></textarea>
-                            <label for="floatingTextarea2">Comments</label>
+                            <label for="floatingTextarea2"></label>
                         </div>
 
                         <div>
-                            <div class="btn btn-primary">invia</div>
+                            <div class="my-btn my-btn-solid">invia</div>
                         </div>
                     </div>
 
@@ -270,7 +269,7 @@ export default {
                 </div>
                 <div class="col-5">
 
-                    <h2>titolo</h2>
+                    <h2>Example Inc.</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, eveniet?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
@@ -281,7 +280,7 @@ export default {
                     </ul>
 
                     <div>
-                        <div class="btn btn-light">invia</div>
+                        <div class="my-btn my-btn-regular">invia</div>
                     </div>
 
                 </div>
@@ -293,7 +292,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 // @use '../../assets/style/general.scss';
 
 .debug {

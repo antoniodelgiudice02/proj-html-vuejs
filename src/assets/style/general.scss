@@ -1,127 +1,172 @@
-@use './partials/variables' as *;
-@use './partials/mixins' as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
 
-.debug{
-    border: 1px solid red;
+.debug {
+  border: 1px solid red;
 }
 
-.section{
-    @include flex-center();
+.section {
+  @include flex-center();
 }
 
 // ------------------------------------------------------------
 //                      GENERAL
 
 section {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .container {
-    width: 60%;
+  width: 60%;
 }
 
 li {
-    list-style: none;
-    margin: 0 10px;
+  list-style: none;
+  margin: 0 10px;
 }
 
 // BUTTON
 
-.my-btn-solid{
-    background-color: $secondary-color;
-    padding: 5px 20px;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
+.my-btn-solid {
+  background-color: $secondary-color;
+  padding: 5px 20px;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 16px 0;
 }
 
-.my-btn-regular{
-    background-color: white;
+.my-btn-regular {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 5px 20px;
+  color: $secondary-color;
+  border: 1px solid $secondary-color;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 16px 0;
+  width: fit-content;
+
+}
+
+.my-second-btn-regular {
+    background-color: rgba(255, 255, 255, 0);
     padding: 5px 20px;
-    color: $secondary-color;
+    color: white;
     border: 1px solid $secondary-color;
     border-radius: 3px;
     cursor: pointer;
-}
+    margin: 16px 0;
+  
+  }
 
 // ------------------------------------------------------------
 //                          NAVBAR
 
-nav{
-    height: 60px;
+nav {
+  height: 60px;
 }
 
 // ------------------------------------------------------------
 //                      JUMBOTRON
 
-#jumbo{
-    height: calc(100vh - 45px - 60px);
-    background-image: url(./images/bg-parallax.png);
-    background-position: center;
-    background-size: 3000px;
-    background-repeat: no-repeat;
+#jumbo {
+  height: calc(100vh - 45px - 60px);
+  background-image: url(./images/bg-parallax.png);
+  background-position: center;
+  background-size: 3000px;
+  background-repeat: no-repeat;
 
-    h1{
+  @include sectionHeaderStylePrimary();
 
-       color: $primary-color;
-
-        span{
-            color: $secondary-color;
-            padding: 0 10px;
-            background-color: $third-color;
-        }
-    }
-
-    p{
-        color: $text-primary-color;
-    }
-
-    .my-btn{
-        margin: 0 15px;
-    }
-
+  .my-btn {
+    margin: 0 15px;
+  }
 }
 
 //---------------------------------------------------------
 //                       BUSINESS
 
-#business{
-    background-color: #eef4ed;
-    padding: 100px 0;
-    
-    span{
-        color: $secondary-color;
-    }
+#business {
+  background-color: #eef4ed;
+  padding: 100px 0;
 
-    h1{
+  @include sectionHeaderStylePrimary();
+}
 
-        color: $primary-color;
- 
-         span{
-             padding: 0 10px;
-             background-color: $third-color;
-         }
-     }
+//---------------------------------------------------------
+//              NETWORK
 
-    p{
+#network{
+    background-color: $fourth-color;
+
+    @include sectionHeaderStyleSecondary();
+}
+
+//---------------------------------------------------------
+//                      PROJECTS
+
+#projects{
+    @include sectionHeaderStylePrimary();
+
+    li{
         color: $text-primary-color;
     }
 }
 
+//---------------------------------------------------------
+//                            NUMBERS
 
+#numbers{
+    background-image: url(./images/bg-7.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include sectionHeaderStyleSecondary();
+}
 
-#contacts-form {
-    div {
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
+//---------------------------------------------------------
+//                              PARTNERS
+
+#partners{
+    background-color: $fourth-color;
+    .row{
+        padding: 0;
+    }
+    .card{
+        margin: 0;
     }
 }
 
+//---------------------------------------------------------
+//                  CONTACTS
 
+#contacts{
+  @include sectionHeaderStylePrimary();
+
+  #contacts-form > div{
+    margin: 0;
+  }
+
+  .my-form-control{
+    background-color: #ececec;
+    border-style: none;
+    padding: 5px 10px;
+    width: 100%;
+    margin: 10px;
+    margin-left: 0;
+  }
+
+}
+
+#contacts-form {
+  div {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+}
 
 .my-form {
-    height: 50px;
+  height: 50px;
 }
