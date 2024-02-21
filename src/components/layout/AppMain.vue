@@ -1,11 +1,12 @@
 <script>
 import { store } from '../../store'
 
-import CardBusiness from './main-components/CardBusiness.vue'
-import CardNetwork from './main-components/CardNetwork.vue'
-import CardProjects from './main-components/CardProjects.vue'
-import CardNumbers from './main-components/CardNumbers.vue'
-import NumbersPartner from './main-components/NumbersPartner.vue'
+import ServicesSection from './main-components/ServicesSection.vue'
+import SectionAbout from './main-components/SectionAbout.vue'
+import SectionProjects from './main-components/SectionProjects.vue'
+import SectionResults from './main-components/SectionResults.vue'
+import PartnersLogos from './main-components/PartnersLogos.vue'
+import GetInTouch from './main-components/GetInTouch.vue'
 
 export default {
     data() {
@@ -14,16 +15,18 @@ export default {
         }
     },
 
-    components: { CardBusiness, CardNetwork, CardProjects, CardNumbers, NumbersPartner },
+    components: { ServicesSection, SectionAbout, SectionProjects, SectionResults, PartnersLogos, GetInTouch },
 
 }
 </script>
 
 <template>
+
     <nav class="d-flex justify-content-around align-items-center debug">
         <span>logo</span>
         <ul class="p-0 m-0 d-flex align-items-center">
             <li v-for="(section, index) in store.sections">{{ section.name }}</li>
+
             <li>
                 <div class="btn btn-primary"> click</div>
             </li>
@@ -50,231 +53,19 @@ export default {
 
     </section>
 
-    <section id="business">
+    <ServicesSection/>
 
-        <div id="business-text-n-button" class="container d-flex justify-content-between align-items-center">
-            <div class="row w-100 justify-content-between">
+    <SectionAbout/>
 
-                <div class="text col-9 ">
-                    <span class="intro">OUR BUSINESS AREAS</span>
-                    <h1>Excellence in <span>Services</span></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quis?Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Hic, aut!</p>
-                </div>
+    <SectionProjects/>
 
-                <div class="button col-2 d-flex justify-content-center align-items-end">
-                    <div class="my-btn my-btn-solid">SEE ALL</div>
-                </div>
+    <SectionResults/>
 
-            </div>
-        </div>
+    <PartnersLogos/>
 
-        <div class="container">
+    <GetInTouch/>
 
-            <div class="row flex-wrap">
-                <div class="col-4" v-for="card in store.cardBusiness">
-                    <card-business :title="card.title" :text="card.text" :icon="card.icon" />
-                </div>
-            </div>
 
-        </div>
-
-    </section>
-
-    <section id="network" class="d-flex">
-
-        <div class="network-container d-flex flex-column align-items-end w-50">
-
-            <div id="network-text" class="container m-0 d-flex justify-content-start align-items-center">
-                <div class="row justify-content-between">
-
-                    <div class="text col ">
-                        <span class="intro">ABOUT THE NETWORK</span>
-                        <h1><span>The</span>Company</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quis?Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Hic, aut!</p>
-                    </div>
-
-
-
-                </div>
-            </div>
-
-            <div id="network-content" class="container m-0">
-
-                <div class="row">
-                    <div class="col-6" v-for="card in store.cardNetwork">
-                        <card-network :title="card.title" :text="card.text" :icon="card.icon" />
-                    </div>
-                </div>
-
-                <div class="button d-flex align-items-center">
-                    <div class="my-btn my-btn-solid">GET IN TOUCH</div>
-                    <div class="my-btn my-second-btn-regular mx-3">READ MORE</div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="image-container">
-            <img src="../../images/about-4.jpg" alt="">
-        </div>
-
-    </section>
-
-    <section id="projects">
-
-        <div class="container">
-
-            <div id="projects-text-n-filter" class="container d-flex justify-content-center align-items-center">
-                <div class="row text-center">
-
-                    <div class="text col ">
-                        <span class="intro">WE DO MORE FOR EVERYONE</span>
-                        <h1>Actions & <span>Projects</span></h1>
-                    </div>
-
-                    <div class="filter">
-                        <ul class="d-flex p-0 justify-content-center">
-                            <li>filter</li>
-                            <li>filter</li>
-                            <li>filter</li>
-                            <li>filter</li>
-                            <li>filter</li>
-                            <li>filter</li>
-                            <li>filter</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="card-container">
-
-                <div class="row">
-                    <div class="col-4" v-for="card in store.cardProjects">
-                        <CardProjects :title="card.title" :image="card.image" />
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="numbers">
-
-        <div id="numbers-text" class="container d-flex justify-content-center align-items-center">
-            <div class="row text-center">
-
-                <div class="text col ">
-                    <span class="intro">WHAT ARE WE DOING</span>
-                    <h1><span>Results</span>in Numbers</h1>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-3" v-for="card in store.cardNumbers">
-                    <CardNumbers :title="card.title" :text="card.text" />
-                </div>
-            </div>
-
-        </div>
-
-
-
-    </section>
-
-    <div id="partners" class="d-flex justify-content-center">
-        <div class="container w-100 m-0 d-flex justify-content-center">
-            <div v-for="image in store.partners">
-                <NumbersPartner :image="image.image" />
-            </div>
-
-        </div>
-    </div>
-
-    <section id="contacts">
-
-        <div class="container">
-
-            <div class="row ">
-                <div class="col-7">
-
-                    <div class="contacts-text col ">
-                        <span class="intro">SEND A MESSAGE</span>
-                        <h1>Get in<span>Touch</span></h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidque distinctio vel unde cumque
-                            laboriosam esse. Dicta, atque repellat.</p>
-                    </div>
-
-                    <div id="contacts-form" class="d-flex flex-wrap justify-content-between">
-
-                        <div class="col-6">
-                            <input type="name" class="my-form-control" id="exampleFormControlInput1" placeholder="Name">
-                        </div>
-
-                        <div class="col-6">
-                            <input type="email" class="my-form-control" id="exampleFormControlInput1"
-                                placeholder="name@example.com">
-                        </div>
-
-                        <div class="col-6">
-                            <input type="phone" class="my-form-control" id="exampleFormControlInput1" placeholder="Phone">
-                        </div>
-
-                        <div class="col-6">
-
-                            <select class="my-form-control" aria-label="Default select example">
-                                <option selected>Other info</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-
-                        </div>
-
-                        <div class="form-floating col-12">
-                            <textarea class="my-form-control" placeholder="Message" id="floatingTextarea2"
-                                style="height: 100px"></textarea>
-                            <label for="floatingTextarea2"></label>
-                        </div>
-
-                        <div>
-                            <div class="my-btn my-btn-solid">invia</div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="col-5">
-
-                    <h2>Example Inc.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, eveniet?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                    <ul class="p-0" v-for="info in store.contacts">
-                        <li >{{info.phoneNumber}}</li>
-                        <li>{{ info.eMail }}</li>
-                        <li>{{ info.address }}</li>
-                    </ul>
-
-                    <div>
-                        <div class="my-btn my-btn-regular">invia</div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </section>
 </template>
 
 <style lang="scss" scoped>

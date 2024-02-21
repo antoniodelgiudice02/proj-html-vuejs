@@ -150,6 +150,54 @@ export const store = reactive({
         
     ],
 
+    main:[
+        {
+            sections:
+            [
+                {   
+                    current: 0,
+                    name: 'Home'
+                },
+                {
+                    name: 'services',
+                    current: 1,
+                    cardBusiness:[
+                        {
+                            icon: 'svg-1.svg',
+                            title: 'Audit & Assurance',
+                            text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
+                        },
+                        {
+                            icon: 'svg-2.svg',
+                            title: 'Financial Advisory',
+                            text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
+                        },
+                        {
+                            icon: 'svg-3.svg',
+                            title: 'Analytics and M&A',
+                            text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
+                        },
+                        {
+                            icon: 'svg-4.svg',
+                            title: 'Middle Marketing',
+                            text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
+                        },
+                        {
+                            icon: 'svg-5.svg',
+                            title: 'Legal Consulting',
+                            text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
+                        },
+                        {
+                            icon: 'svg-6.svg',
+                            title: 'Regulatory Risk',
+                            text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
+                        },
+                    ],
+                }
+            ]
+        } 
+    ]
+
     
 });
 
