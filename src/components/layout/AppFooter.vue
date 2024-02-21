@@ -45,6 +45,10 @@ export default {
     <span>Lorem ipsum dolor sit.</span>
     <span>Lorem ipsum dolor sit. <a href="">coding</a></span>
   </div>
+
+  <div class="return-button">
+
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -53,6 +57,11 @@ export default {
 footer {
   padding: 100px 0;
   background-color: $fourth-color ;
+  position: relative;
+
+  .my-btn{
+    width: fit-content;
+  }
 
   .card {
     background-color: #19191f;
@@ -79,6 +88,17 @@ footer {
     text-decoration: none;
     color: currentColor;
   }
+
+  .return-button{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $secondary-color;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+  }
 }
 
 .w-100 {
@@ -89,7 +109,7 @@ footer {
   background-color: black;
   padding: 20px;
 
-  a{
+  a {
     color: $secondary-color;
     text-decoration: none;
   }

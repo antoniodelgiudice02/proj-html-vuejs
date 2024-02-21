@@ -3,10 +3,6 @@
 
 @import "bootstrap/scss/bootstrap";
 
-.debug {
-  border: 1px solid red;
-}
-
 .section {
   @include flex-center();
 }
@@ -151,7 +147,7 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     @include sectionHeaderStyleSecondary();
-    .card{
+    .card{ 
       border: none;
     }
 }
