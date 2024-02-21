@@ -2,6 +2,14 @@ import { reactive } from "vue";
 
 export const store = reactive({
 
+    contacts: [
+        {
+            phoneNumber: '+1 (305) 1234-5678',
+            eMail: 'example@mail.com',
+            address: 'Main Avenue 987'
+        }
+    ],
+
     cardBusiness:[
         {
             icon: 'svg-1.svg',
@@ -87,42 +95,40 @@ export const store = reactive({
 
     cardNumbers:[
         {
-            title: '100',
-            text: 'titolo'
+            title: '128',
+            text: 'Certifications'
         },
         {
-            title: '100',
-            text: 'titolo'
+            title: '230',
+            text: 'Employees'
         },
         {
-            title: '100',
-            text: 'titolo'
+            title: '517',
+            text: 'Customers'
         },
         {
-            title: '100',
-            text: 'titolo'
+            title: '94',
+            text: 'Coutries Served'
         }
     ],
 
     partners:[
         {
-            image: 'image',
+            image: 'logo-1.png',
         },
         {
-            image: 'image',
+            image: 'logo-2.png',
         },
         {
-            image: 'image',
+            image: 'logo-3.png',
         },
         {
-            image: 'image',
+            image: 'logo-4.png',
         },
         {
-            image: 'image',
+            image: 'logo-5.png',
         },
-        {
-            image: 'image',
-        }
+        
     ],
 
     

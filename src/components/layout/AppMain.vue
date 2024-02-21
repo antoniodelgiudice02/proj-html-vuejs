@@ -72,7 +72,7 @@ export default {
 
     </section>
 
-    <section id="business" class="debug">
+    <section id="business">
 
         <div id="business-text-n-button" class="container d-flex justify-content-between align-items-center">
             <div class="row w-100 justify-content-between">
@@ -91,7 +91,7 @@ export default {
             </div>
         </div>
 
-        <div class="container debug">
+        <div class="container">
 
             <div class="row flex-wrap">
                 <div class="col-4" v-for="card in store.cardBusiness">
@@ -103,7 +103,7 @@ export default {
 
     </section>
 
-    <section id="network" class="d-flex debug">
+    <section id="network" class="d-flex">
 
         <div class="network-container d-flex flex-column align-items-end w-50">
 
@@ -145,7 +145,7 @@ export default {
 
     </section>
 
-    <section id="projects" class="debug">
+    <section id="projects">
 
         <div class="container">
 
@@ -172,7 +172,7 @@ export default {
                 </div>
             </div>
 
-            <div class="card-container debug">
+            <div class="card-container">
 
                 <div class="row">
                     <div class="col-4" v-for="card in store.cardProjects">
@@ -186,12 +186,12 @@ export default {
 
     </section>
 
-    <section id="numbers" class="debug">
+    <section id="numbers">
 
         <div id="numbers-text" class="container d-flex justify-content-center align-items-center">
             <div class="row text-center">
 
-                <div class="text col debug2 ">
+                <div class="text col ">
                     <span class="intro">WHAT ARE WE DOING</span>
                     <h1><span>Results</span>in Numbers</h1>
                 </div>
@@ -199,7 +199,7 @@ export default {
             </div>
         </div>
 
-        <div class="container debug">
+        <div class="container">
 
             <div class="row justify-content-center">
                 <div class="col-3" v-for="card in store.cardNumbers">
@@ -214,15 +214,15 @@ export default {
     </section>
 
     <div id="partners" class="d-flex justify-content-center">
-        <div class="container w-100 m-0 d-flex debug">
-            <div class="col-2" v-for="image in store.partners">
+        <div class="container w-100 m-0 d-flex justify-content-center">
+            <div v-for="image in store.partners">
                 <NumbersPartner :image="image.image" />
             </div>
 
         </div>
     </div>
 
-    <section id="contacts" class="debug">
+    <section id="contacts">
 
         <div class="container">
 
@@ -281,10 +281,10 @@ export default {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, eveniet?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-                    <ul class="p-0">
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
+                    <ul class="p-0" v-for="info in store.contacts">
+                        <li >{{info.phoneNumber}}</li>
+                        <li>{{ info.eMail }}</li>
+                        <li>{{ info.address }}</li>
                     </ul>
 
                     <div>

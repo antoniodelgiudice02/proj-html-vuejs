@@ -8,7 +8,7 @@ export default {
     }
   },
 
-  props:{
+  props: {
     title: String,
     text: String
   }
@@ -17,24 +17,34 @@ export default {
 </script>
 
 <template>
-
-    <div class="card">
-        <h1>{{ title }}</h1>
-        <p>{{ text }}</p>
-    </div>
-
-
-
-
+  <div class="card">
+    <span class="number">{{ title }}</span>
+    <span class="text">{{ text }}</span>
+  </div>
 </template>
 
 <style lang="scss" scoped>
+@import '../../../assets/style/partials/variables';
 
 .card {
-    height: 200px;
-    margin: 15px 0;
-    padding: 20px;
+  height: 200px;
+  background-color: rgba(240, 248, 255, 0);
+  margin: 15px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .number {
+    color: $secondary-color;
+
+    font-size: 2rem;
+  }
+
+  .text {
+    color: white;
+    font-size: 1.5rem;
+  }
 }
-
-
 </style>
