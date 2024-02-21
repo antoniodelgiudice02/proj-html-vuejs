@@ -10,6 +10,25 @@ export const store = reactive({
         }
     ],
 
+    sections:[
+        {
+            name: 'Home'
+        },
+        {
+            name: 'Services'
+        },
+        {
+            name: 'About'
+        },
+        {
+            name: 'Projects'
+        },
+        {
+            name: 'Results'
+        },
+
+    ],
+
     cardBusiness:[
         {
             icon: 'svg-1.svg',

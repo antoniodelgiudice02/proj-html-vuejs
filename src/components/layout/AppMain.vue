@@ -16,24 +16,6 @@ export default {
 
     components: { CardBusiness, CardNetwork, CardProjects, CardNumbers, NumbersPartner },
 
-    // methods:{
-    //     assignColClass(index){
-    //         if (index == 0 || 2){
-    //             this.colClass = 'col-4'
-    //         }
-    //         if (index == 1){
-    //             this.colClass = 'col-6'
-    //         }
-    //         if (index == 3){
-    //             this.colClass = 'col-3'
-    //         }
-
-    //         return this.colClass
-    //     }
-    // }
-
-
-
 }
 </script>
 
@@ -41,11 +23,7 @@ export default {
     <nav class="d-flex justify-content-around align-items-center debug">
         <span>logo</span>
         <ul class="p-0 m-0 d-flex align-items-center">
-            <li>nav item</li>
-            <li>nav item</li>
-            <li>nav item</li>
-            <li>nav item</li>
-            <li>nav item</li>
+            <li v-for="(section, index) in store.sections">{{ section.name }}</li>
             <li>
                 <div class="btn btn-primary"> click</div>
             </li>
