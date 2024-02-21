@@ -36,7 +36,7 @@ export default {
         <div class="container">
 
             <div class="row justify-content-center">
-                <div class="col-3" v-for="card in store.cardNumbers">
+                <div class="col-3" v-for="card in store.sections[4].cards">
                     <CardNumbers :title="card.title" :text="card.text" />
                 </div>
             </div>

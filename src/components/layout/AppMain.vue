@@ -17,16 +17,21 @@ export default {
 
     components: { ServicesSection, SectionAbout, SectionProjects, SectionResults, PartnersLogos, GetInTouch },
 
+    methods:{
+        prova(){
+            console.log('ok!')
+        }
+    }
+
 }
 </script>
 
 <template>
-
+    
     <nav class="d-flex justify-content-around align-items-center debug">
         <span>logo</span>
         <ul class="p-0 m-0 d-flex align-items-center">
-            <li v-for="(section, index) in store.sections">{{ section.name }}</li>
-
+            <li v-for="(section, index) in store.sections" @click="">{{ section.name }}</li>
             <li>
                 <div class="btn btn-primary"> click</div>
             </li>

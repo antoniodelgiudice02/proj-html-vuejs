@@ -45,7 +45,7 @@ export default {
         <div class="container">
 
             <div class="row flex-wrap">
-                <div class="col-4" v-for="card in store.cardBusiness">
+                <div class="col-4" v-for="card in store.sections[1].cards">
                     <card-services :title="card.title" :text="card.text" :icon="card.icon" />
                 </div>
             </div>

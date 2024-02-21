@@ -18,7 +18,7 @@ export default {
 <template>
     <div id="partners" class="d-flex justify-content-center">
         <div class="container w-100 m-0 d-flex justify-content-center">
-            <div v-for="image in store.partners">
+            <div v-for="image in store.sections[5].cards">
                 <NumbersPartner :image="image.image" />
             </div>
 
