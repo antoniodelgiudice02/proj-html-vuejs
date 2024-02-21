@@ -34,13 +34,13 @@ export default {
 
                     <div class="filter">
                         <ul class="d-flex p-0 justify-content-center">
-                            <li>filter</li>
-                            <li>filter</li>
-                            <li>filter</li>
-                            <li>filter</li>
-                            <li>filter</li>
-                            <li>filter</li>
-                            <li>filter</li>
+                            <li>ALL</li>
+                            <li>INSTITUTIONAL</li>
+                            <li>SOCIAL</li>
+                            <li>EVENTS</li>
+                            <li>INNOVATION</li>
+                            <li>ENVIRONMENT</li>
+                            <li>TECHNOLOGY</li>
                         </ul>
                     </div>
 
@@ -62,4 +62,16 @@ export default {
     </section>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '../../../assets/style/partials/variables';
+.filter{
+    li{
+        &:hover{
+            background-color: $third-color;
+        }
+        cursor: pointer;
+        padding: 7px
+    }
+}
+
+</style>

@@ -49,7 +49,7 @@ export default {
                 window.scrollTo(0, 3070);
             }
         },
-        scrollToContacts(){
+        scrollToContacts() {
             window.scrollTo(0, 3690);
         }
 
@@ -61,15 +61,18 @@ export default {
 <template>
     <main>
 
-        
+
 
         <nav class="d-flex justify-content-around align-items-center">
-            <span>logo</span>
+            <div class="logo-container">
+                <span><img src="../../images/logo.PNG" alt=""></span>
+
+            </div>
             <ul class="p-0 m-0 d-flex align-items-center">
                 <li v-for="(section, index) in store.sections" @click="scrollToSection(index)">{{ section.name }}</li>
 
                 <li>
-                    <div class="btn btn-primary" @click="scrollToContacts()"> click</div>
+                    <div class="my-btn my-btn-solid" @click="scrollToContacts()">GET IN TOUCH</div>
                 </li>
             </ul>
         </nav>
@@ -113,6 +116,15 @@ export default {
 
 <style lang="scss" scoped>
 // @use '../../assets/style/general.scss';
+@import '../../assets/style/partials/variables';
+
+.logo-container {
+    width: 150px;
+
+    img {
+        width: 100%;
+    }
+}
 
 
 
@@ -123,11 +135,17 @@ nav {
     top: 45px;
     z-index: 1;
     background-color: white;
+
+    li {
+        cursor: pointer;
+    }
+
 }
 
 main {
     position: relative;
-    #jumbo{
+
+    #jumbo {
         margin-top: 90px;
     }
 }
@@ -140,5 +158,4 @@ main {
 .debug2 {
 
     border: 1px solid red;
-}
-</style>
+}</style>

@@ -58,4 +58,8 @@ export default {
 
 <style lang="scss" scoped>
 
+.card{
+    cursor: pointer;
+}
+
 </style>

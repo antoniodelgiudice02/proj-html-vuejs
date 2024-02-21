@@ -6,7 +6,17 @@ export default {
     return {
       store,
     }
+  },
+
+  methods: {
+    scrollToHome() {
+      window.scrollTo(0, 0);
+
+
+    }
   }
+
+
 
 }
 </script>
@@ -46,8 +56,8 @@ export default {
     <span>Lorem ipsum dolor sit. <a href="">coding</a></span>
   </div>
 
-  <div class="return-button">
-
+  <div class="return-button" @click="scrollToHome()">
+    <span>UP</span>
   </div>
 </template>
 
@@ -59,7 +69,7 @@ footer {
   background-color: $fourth-color ;
   position: relative;
 
-  .my-btn{
+  .my-btn {
     width: fit-content;
   }
 
@@ -89,16 +99,7 @@ footer {
     color: currentColor;
   }
 
-  .return-button{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: $secondary-color;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    z-index: 1;
-  }
+
 }
 
 .w-100 {
@@ -113,5 +114,20 @@ footer {
     color: $secondary-color;
     text-decoration: none;
   }
+}
+
+.return-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  cursor:pointer
 }
 </style>

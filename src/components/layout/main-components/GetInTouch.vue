@@ -72,10 +72,8 @@ export default {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, eveniet?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-                    <ul class="p-0" v-for="info in store.contacts">
-                        <li>{{ info.phoneNumber }}</li>
-                        <li>{{ info.eMail }}</li>
-                        <li>{{ info.address }}</li>
+                    <ul class="p-0">
+                        <li v-for="contact in store.contacts">{{ contact.contact }}</li>
                     </ul>
 
                     <div>
