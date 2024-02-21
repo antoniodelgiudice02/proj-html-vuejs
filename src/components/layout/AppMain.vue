@@ -95,7 +95,7 @@ export default {
 
             <div class="row flex-wrap">
                 <div class="col-4" v-for="card in store.cardBusiness">
-                    <card-business :title="card.title" :text="card.text" :icon="card.icon"/>
+                    <card-business :title="card.title" :text="card.text" :icon="card.icon" />
                 </div>
             </div>
 
@@ -103,36 +103,44 @@ export default {
 
     </section>
 
-    <section id="network" class="debug">
+    <section id="network" class="d-flex debug">
 
-        <div id="network-text" class="container d-flex justify-content-start align-items-center">
-            <div class="row w-50 justify-content-between">
+        <div class="network-container d-flex flex-column align-items-end w-50">
 
-                <div class="text col ">
-                    <span class="intro">ABOUT THE NETWORK</span>
-                    <h1><span>The</span>Company</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quis?Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Hic, aut!</p>
+            <div id="network-text" class="container m-0 d-flex justify-content-start align-items-center">
+                <div class="row justify-content-between">
+
+                    <div class="text col ">
+                        <span class="intro">ABOUT THE NETWORK</span>
+                        <h1><span>The</span>Company</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quis?Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Hic, aut!</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div id="network-content" class="container m-0">
+
+                <div class="row">
+                    <div class="col-6" v-for="card in store.cardNetwork">
+                        <card-network :title="card.title" :text="card.text" :icon="card.icon" />
+                    </div>
                 </div>
 
-
+                <div class="button d-flex align-items-center">
+                    <div class="my-btn my-btn-solid">GET IN TOUCH</div>
+                    <div class="my-btn my-second-btn-regular mx-3">READ MORE</div>
+                </div>
 
             </div>
+
         </div>
 
-        <div class="container debug">
-
-            <div class="row w-50">
-                <div class="col-6" v-for="card in store.cardNetwork">
-                    <card-network :title="card.title" :text="card.text" />
-                </div>
-            </div>
-
-            <div class="button w-50 d-flex align-items-center">
-                <div class="my-btn my-btn-solid">GET IN TOUCH</div>
-                <div class="my-btn my-second-btn-regular mx-3">READ MORE</div>
-            </div>
-
+        <div class="image-container">
+            <img src="../../images/about-4.jpg" alt="">
         </div>
 
     </section>
@@ -164,7 +172,7 @@ export default {
                 </div>
             </div>
 
-            <div class="container debug">
+            <div class="card-container debug">
 
                 <div class="row">
                     <div class="col-4" v-for="card in store.cardProjects">
@@ -223,7 +231,7 @@ export default {
 
                     <div class="contacts-text col ">
                         <span class="intro">SEND A MESSAGE</span>
-                        <h1>Get in<SPAN>Touch</SPAN></h1>
+                        <h1>Get in<span>Touch</span></h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidque distinctio vel unde cumque
                             laboriosam esse. Dicta, atque repellat.</p>
                     </div>

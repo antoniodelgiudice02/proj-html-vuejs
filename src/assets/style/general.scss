@@ -100,8 +100,35 @@ nav {
 
 #network{
     background-color: $fourth-color;
+    padding: 0;
+    height: 730px;
+
+    .network-container{
+      margin: 50px 0;
+      justify-content: center;
+    }
+
+    .image-container{
+      width: 50%;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    
+    }
+
+    #network-text, .network-content{
+      width: 60%
+    }
 
     @include sectionHeaderStyleSecondary();
+
+    p{
+      font-size: 0.8rem;
+    }
 }
 
 //---------------------------------------------------------

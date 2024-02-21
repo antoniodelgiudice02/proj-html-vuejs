@@ -8,33 +8,44 @@ export default {
     }
   },
 
-  props:{
+  props: {
     title: String,
-    text: String
+    image: String
+  },
+
+  methods: {
+    getImage() {
+      return new URL('../../../images/' + this.image, import.meta.url).href
+    }
   }
 
 }
 </script>
 
 <template>
+  <div class="card">
 
-    <div class="card">
-        <h1>{{ title }}</h1>
-        <p>{{ text }}</p>
+    <img :src="getImage()" alt="">
+
+    <div class="text">
+      <span class="title">{{ title }}</span>
     </div>
 
-
-
-
+  </div>
 </template>
 
 <style lang="scss" scoped>
-
 .card {
-    height: 200px;
-    margin: 15px 0;
-    padding: 20px;
+  margin: 15px 0;
+  position: relative;
+
+  .text {
+    position: absolute;
+    bottom: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    margin: 15px;
+  }
 }
-
-
 </style>

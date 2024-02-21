@@ -37,47 +37,51 @@ export const store = reactive({
 
     cardNetwork:[
         {
-            title: 'card 1',
+            icon: 'award',
+            title: 'Tradition',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
         },
         {
-            title: 'card 2',
+            icon: 'lock',
+            title: 'Security',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
         },
         {
-            title: 'card 3',
+            icon: 'file-signature',
+            title: 'Certificate',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
         },
         {
-            title: 'card 4',
+            icon: 'graduation-cap',
+            title: 'Expertise',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
         }
     ],
 
     cardProjects:[
         {
-            title: 'card 1',
-            image: ''
+            title: 'Academic professional program in social media',
+            image: 'project-1.jpg'
         },
         {
-            title: 'card 2',
-            image: ''
+            title: "President's speech at annual meeting",
+            image: 'project-2.jpg'
         },
         {
-            title: 'card 3',
-            image: ''
+            title: 'International business trip in Shangai',
+            image: 'project-3.jpg'
         },
         {
-            title: 'card 4',
-            image: ''
+            title: 'Technology workshop with education theme',
+            image: 'project-4.jpg'
         },
         {
-            title: 'card 5',
-            image: ''
+            title: 'Donatione clothes and food to the partner of NGO',
+            image: 'project-5.jpg'
         },
         {
-            title: 'card 6',
-            image: ''
+            title: 'Confraternization of procurement team',
+            image: 'project-6.jpg'
         },
     ],
 
