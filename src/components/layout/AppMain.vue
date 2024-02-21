@@ -95,7 +95,7 @@ export default {
 
             <div class="row flex-wrap">
                 <div class="col-4" v-for="card in store.cardBusiness">
-                    <card-business :title="card.title" :text="card.text" />
+                    <card-business :title="card.title" :text="card.text" :icon="card.icon"/>
                 </div>
             </div>
 

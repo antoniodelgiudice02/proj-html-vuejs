@@ -4,27 +4,33 @@ export const store = reactive({
 
     cardBusiness:[
         {
-            title: 'card 1',
+            icon: 'svg-1.svg',
+            title: 'Audit & Assurance',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
         },
         {
-            title: 'card 2',
+            icon: 'svg-2.svg',
+            title: 'Financial Advisory',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
         },
         {
-            title: 'card 3',
+            icon: 'svg-3.svg',
+            title: 'Analytics and M&A',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
         },
         {
-            title: 'card 4',
+            icon: 'svg-4.svg',
+            title: 'Middle Marketing',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
         },
         {
-            title: 'card 5',
+            icon: 'svg-5.svg',
+            title: 'Legal Consulting',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
         },
         {
-            title: 'card 6',
+            icon: 'svg-6.svg',
+            title: 'Regulatory Risk',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing'
         },
     ],
